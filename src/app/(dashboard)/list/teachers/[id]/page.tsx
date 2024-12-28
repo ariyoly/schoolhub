@@ -1,3 +1,4 @@
+import BigCalender from "@/components/BigCalender";
 import Image from "next/image";
 
 const SingleTeacherPage = () => {
@@ -42,7 +43,7 @@ const SingleTeacherPage = () => {
             {/* small card */}
             <div className="flex-1 flex gap-4 justify-between flex-wrap">
                 {/* card */}
-                <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:[45%] 2xl:[48%]">
+                <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:[45%] 2xl:w-[48%]">
                     <Image src="/singleAttendance.png" alt="" width={24} height={24} className="w-6 h-6"/>
                     <div className="">
                         <h1 className="text-xl font-semibold">90%</h1>
@@ -50,7 +51,7 @@ const SingleTeacherPage = () => {
                     </div>
                 </div>
                 {/* card */}
-                <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:[45%] 2xl:[48%]">
+                <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:[45%] 2xl:w-[48%]">
                     <Image src="/singleBranch.png" alt="" width={24} height={24} className="w-6 h-6"/>
                     <div className="">
                         <h1 className="text-xl font-semibold">2</h1>
@@ -58,7 +59,7 @@ const SingleTeacherPage = () => {
                     </div>
                 </div>
                 {/* card */}
-                <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:[45%] 2xl:[48%]">
+                <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:[45%] 2xl:w-[48%]">
                     <Image src="/singleLesson.png" alt="" width={24} height={24} className="w-6 h-6"/>
                     <div className="">
                         <h1 className="text-xl font-semibold">6</h1>
@@ -66,7 +67,7 @@ const SingleTeacherPage = () => {
                     </div>
                 </div>
                 {/* card */}
-                <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:[45%] 2xl:[48%]">
+                <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:[45%] 2xl:w-[48%]">
                     <Image src="/singleClass.png" alt="" width={24} height={24} className="w-6 h-6"/>
                     <div className="">
                         <h1 className="text-xl font-semibold">6</h1>
@@ -76,7 +77,10 @@ const SingleTeacherPage = () => {
             </div>
             </div>
             {/* bottom */}
-            <div className=""></div>
+            <div className="mt-4 bg-white rounded-md p-4 h-[800px]">
+                <h1 className="">Teacher's Schedule</h1>
+                <BigCalender/>
+            </div>
             </div>
             {/* right */}
             <div className="w-full xl:w-1/3"></div>
