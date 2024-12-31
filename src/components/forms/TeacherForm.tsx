@@ -1,5 +1,7 @@
 "use client"
 
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 
@@ -36,9 +38,13 @@ const TeacherForm = ({
         resolver: zodResolver(schema),
       });
     return(
-        <form className="">
-            input
-        </form>
+        <form className="flex flex-col gap-8">
+            <h1 className="text-xl font-semibold">Create a new teacher</h1>
+            <span className="text-xs text-gray-400 font-medium">Authentication Information</span>
+            <input type="text" className="ring-[1.5px] ring-gray-300 p-2 rounded-md text-sm" {...register("username")}/>
+            {errors.username?.message && <p>{errors.username?.message.toString()}</p>}
+            <span className="text-xs text-gray-400 font-medium">Personal Information</span>
+         </form>
     )
 }
 
