@@ -1,6 +1,6 @@
 import Announcements from "@/components/Announcements";
 import BigCalendarContainer from "@/components/BigCalendarContainer";
-import BigCalendar from "@/components/BigCalender";
+import BigCalendar from "@/components/BigCalendar";
 import FormContainer from "@/components/FormContainer";
 import Performance from "@/components/Performance";
 import prisma from "@/lib/prisma";
@@ -15,7 +15,7 @@ const SingleTeacherPage = async ({
 }: {
   params: { id: string };
 }) => {
-  const { sessionClaims } = auth();
+  const { sessionClaims } = await auth();
   const role = (sessionClaims?.metadata as { role?: string })?.role;
 
   const teacher:
