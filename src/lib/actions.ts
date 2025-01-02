@@ -142,7 +142,7 @@ export const createTeacher = async (
   data: TeacherSchema
 ) => {
   try {
-    const user = await clerkClient.user.createUser({
+    const user = await clerkClient.users.createUser({
       username: data.username,
       password: data.password,
       firstName: data.name,

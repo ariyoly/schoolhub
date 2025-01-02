@@ -11,8 +11,9 @@ import { createTeacher, updateTeacher } from "@/lib/actions";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { CldUploadWidget } from "next-cloudinary";
+import { clerkClient } from "@clerk/nextjs/server";
 
-const TeacherForm = ({
+const TeacherForm = async ({
   type,
   data,
   setOpen,
