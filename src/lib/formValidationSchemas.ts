@@ -86,4 +86,4 @@ export const examSchema = z.object({
   lessonId: z.coerce.number({ message: "Lesson is required!" }),
 });
 
-export type ExamSchema = z.infer<typeof examSchema>;
+export type ExamSchema = z.infer<typeof examSchema>; 
